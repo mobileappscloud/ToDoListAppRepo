@@ -22,6 +22,7 @@
     [self.window makeKeyAndVisible];
     return YES;
     //edit here later
+    //test
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
