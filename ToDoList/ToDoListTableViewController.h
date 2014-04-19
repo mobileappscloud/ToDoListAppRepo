@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Item.h"
 
-@interface ToDoListTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ToDoListTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (nonatomic, strong) IBOutlet UIView *headerView;
 @property (nonatomic, strong) NSMutableArray *listArray;
 @property (nonatomic, strong) IBOutlet UITextField *userText;

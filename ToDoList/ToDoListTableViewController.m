@@ -51,6 +51,8 @@
 {
     [super viewDidLoad];
     
+    userText.delegate = self;
+    
     self.tableView.delegate = self;
     
     UIView *header = self.headerView;
@@ -65,6 +67,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -100,6 +104,7 @@
 }
 
 - (IBAction)addNewItem:(id)sender
+
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Item *itemData = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:context];
@@ -117,8 +122,27 @@
         NSLog(@"It saved properly");
     }
     
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Item"];
+    listArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    
     [self.tableView reloadData];
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+   
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:TRUE];
 }
 
 - (IBAction)toggleEditingMode:(id)sender
