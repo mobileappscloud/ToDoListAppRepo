@@ -8,6 +8,7 @@
 
 #import "ToDoListTableViewController.h"
 
+
 @interface ToDoListTableViewController ()
 
 @end
@@ -160,6 +161,11 @@
     }
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return @"Completed";
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -200,6 +206,20 @@
     [self.tableView reloadData];
 }
 
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
+toIndexPath:(NSIndexPath *)toIndexPath
+{
+    NSManagedObject *item = [listArray objectAtIndex:fromIndexPath.row];
+    [listArray removeObject:item];
+    [listArray insertObject:item atIndex:toIndexPath.row];
+}
 
 
 
