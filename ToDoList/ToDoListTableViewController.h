@@ -12,6 +12,7 @@
 @interface ToDoListTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) IBOutlet UIView *headerView;
 @property (nonatomic, strong) NSMutableArray *listArray;
+@property (nonatomic, strong) IBOutlet UITextField *userText;
 
 -(IBAction)addNewItem:(id)sender;
 -(IBAction)toggleEditingMode:(id)sender;

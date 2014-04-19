@@ -13,7 +13,7 @@
 @end
 
 @implementation ToDoListTableViewController
-@synthesize listArray;
+@synthesize listArray, userText;
 
 -(NSManagedObjectContext *)managedObjectContext
 {
@@ -101,6 +101,23 @@
 
 - (IBAction)addNewItem:(id)sender
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Item *itemData = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:context];
+    [itemData setValue:userText.text forKey:@"name"];
+    
+    NSError *error;
+    
+    if (![context save:&error])
+    {
+        NSLog(@"Couldnt find the save %@", error.localizedDescription);
+    }
+    
+    else
+    {
+        NSLog(@"It saved properly");
+    }
+    
+    [self.tableView reloadData];
     
 }
 
@@ -122,9 +139,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    tableView.delegate = self;
     
-    cell.textLabel.text = @"Test";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    NSManagedObject *ItemData = [listArray objectAtIndex:indexPath.row];
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [ItemData valueForKey:@"name"]]];
+    
+    
     
     // Configure the cell...
     
