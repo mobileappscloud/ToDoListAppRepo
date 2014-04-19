@@ -180,6 +180,28 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [context deleteObject:[listArray objectAtIndex:indexPath.row]];
+        
+        NSError *error;
+        if (![context save:&error])
+        {
+            NSLog(@"Cant delete! %@", [error localizedDescription]);
+        }
+        
+        [listArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    
+    [self.tableView reloadData];
+}
+
+
+
 
 /*
 // Override to support conditional editing of the table view.
