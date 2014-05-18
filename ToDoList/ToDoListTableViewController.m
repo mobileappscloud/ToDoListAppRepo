@@ -7,6 +7,7 @@
 //
 
 #import "ToDoListTableViewController.h"
+#import "ItemDetailsViewController.h"
 
 
 @interface ToDoListTableViewController ()
@@ -67,6 +68,26 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Next"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSManagedObject *ItemData = [listArray objectAtIndex:indexPath.row];
+        
+        ItemDetailsViewController *detailsVC = (ItemDetailsViewController *)segue.destinationViewController;
+        
+        [detailsVC setNameLabel:[ItemData valueForKey:@"name"]];
+        
+        NSDate *today = [NSDate date];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        NSString *dateString = [dateFormat stringFromDate:today];
+        
+        [detailsVC setDateString:dateString];
+    }
 }
 
 
@@ -177,7 +198,9 @@
     
     NSManagedObject *ItemData = [listArray objectAtIndex:indexPath.row];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [ItemData valueForKey:@"name"]]];
+   
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%ld) %@", (long)indexPath.row + 1, [ItemData valueForKey:@"name"]]];
     
     
     

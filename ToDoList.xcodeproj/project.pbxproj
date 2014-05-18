@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		8800DFD21901D9F70056877E /* ToDoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8800DFD11901D9F70056877E /* ToDoListTableViewController.m */; };
 		8800DFD41901DA080056877E /* StoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8800DFD31901DA080056877E /* StoryBoard.storyboard */; };
-		8800DFD71901DB880056877E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8800DFD61901DB880056877E /* Item.m */; };
 		8800DFD91901DBEC0056877E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8800DFD81901DBEC0056877E /* HeaderView.xib */; };
+		8806058E19268C3E007441D2 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8806058D19268C3E007441D2 /* InfoViewController.m */; };
+		8806059119269095007441D2 /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8806059019269095007441D2 /* ItemDetailsViewController.m */; };
+		880605941926975E007441D2 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 880605931926975E007441D2 /* Item.m */; };
+		8806059519269772007441D2 /* ToDoList.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 886511FB1901A909001282C4 /* ToDoList.xcdatamodeld */; };
+		883864411904835100E86AD2 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883864401904835100E86AD2 /* ShareViewController.m */; };
 		886511E81901A909001282C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886511E71901A909001282C4 /* Foundation.framework */; };
 		886511EA1901A909001282C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886511E91901A909001282C4 /* CoreGraphics.framework */; };
 		886511EC1901A909001282C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886511EB1901A909001282C4 /* UIKit.framework */; };
@@ -26,6 +30,17 @@
 		886512091901A909001282C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886511ED1901A909001282C4 /* CoreData.framework */; };
 		886512111901A909001282C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865120F1901A909001282C4 /* InfoPlist.strings */; };
 		886512131901A909001282C4 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 886512121901A909001282C4 /* ToDoListTests.m */; };
+		889B4C1A19048582001C4FE6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889B4C1919048582001C4FE6 /* Social.framework */; };
+		889B4C1C1904858C001C4FE6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889B4C1B1904858C001C4FE6 /* MessageUI.framework */; };
+		889B4C1E190489F5001C4FE6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C1D190489F5001C4FE6 /* background.png */; };
+		889B4C2219048A0C001C4FE6 /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2119048A0C001C4FE6 /* tabbar.png */; };
+		889B4C2419048A23001C4FE6 /* GreenNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2319048A23001C4FE6 /* GreenNavBar.png */; };
+		889B4C2619048A8F001C4FE6 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2519048A8F001C4FE6 /* button.png */; };
+		889B4C2819048B90001C4FE6 /* TwitterShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2719048B90001C4FE6 /* TwitterShareButton.png */; };
+		889B4C2A19048B93001C4FE6 /* FaceBookShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2919048B93001C4FE6 /* FaceBookShareButton.png */; };
+		889B4C2C19048CBC001C4FE6 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2B19048CBC001C4FE6 /* share.png */; };
+		889B4C2E19048CE5001C4FE6 /* 179-notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2D19048CE5001C4FE6 /* 179-notepad.png */; };
+		889B4C3019048D0C001C4FE6 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 889B4C2F19048D0C001C4FE6 /* 53-house.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +57,15 @@
 		8800DFD01901D9F70056877E /* ToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListTableViewController.h; sourceTree = "<group>"; };
 		8800DFD11901D9F70056877E /* ToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListTableViewController.m; sourceTree = "<group>"; };
 		8800DFD31901DA080056877E /* StoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryBoard.storyboard; sourceTree = "<group>"; };
-		8800DFD51901DB880056877E /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		8800DFD61901DB880056877E /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		8800DFD81901DBEC0056877E /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		8806058C19268C3E007441D2 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		8806058D19268C3E007441D2 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		8806058F19269095007441D2 /* ItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
+		8806059019269095007441D2 /* ItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
+		880605921926975E007441D2 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		880605931926975E007441D2 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		8838643F1904835100E86AD2 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		883864401904835100E86AD2 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		886511E41901A909001282C4 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886511E71901A909001282C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		886511E91901A909001282C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +84,17 @@
 		8865120E1901A909001282C4 /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		886512101901A909001282C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		886512121901A909001282C4 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		889B4C1919048582001C4FE6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		889B4C1B1904858C001C4FE6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		889B4C1D190489F5001C4FE6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		889B4C2119048A0C001C4FE6 /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
+		889B4C2319048A23001C4FE6 /* GreenNavBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenNavBar.png; sourceTree = "<group>"; };
+		889B4C2519048A8F001C4FE6 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		889B4C2719048B90001C4FE6 /* TwitterShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterShareButton.png; sourceTree = "<group>"; };
+		889B4C2919048B93001C4FE6 /* FaceBookShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaceBookShareButton.png; sourceTree = "<group>"; };
+		889B4C2B19048CBC001C4FE6 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		889B4C2D19048CE5001C4FE6 /* 179-notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad.png"; sourceTree = "<group>"; };
+		889B4C2F19048D0C001C4FE6 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889B4C1C1904858C001C4FE6 /* MessageUI.framework in Frameworks */,
+				889B4C1A19048582001C4FE6 /* Social.framework in Frameworks */,
 				886511EA1901A909001282C4 /* CoreGraphics.framework in Frameworks */,
 				886511EE1901A909001282C4 /* CoreData.framework in Frameworks */,
 				886511EC1901A909001282C4 /* UIKit.framework in Frameworks */,
@@ -113,6 +147,8 @@
 		886511E61901A909001282C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				889B4C1B1904858C001C4FE6 /* MessageUI.framework */,
+				889B4C1919048582001C4FE6 /* Social.framework */,
 				886511E71901A909001282C4 /* Foundation.framework */,
 				886511E91901A909001282C4 /* CoreGraphics.framework */,
 				886511EB1901A909001282C4 /* UIKit.framework */,
@@ -125,16 +161,31 @@
 		886511EF1901A909001282C4 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				889B4C2519048A8F001C4FE6 /* button.png */,
+				889B4C2F19048D0C001C4FE6 /* 53-house.png */,
+				889B4C2D19048CE5001C4FE6 /* 179-notepad.png */,
+				889B4C2719048B90001C4FE6 /* TwitterShareButton.png */,
+				889B4C2119048A0C001C4FE6 /* tabbar.png */,
+				889B4C2B19048CBC001C4FE6 /* share.png */,
+				889B4C2919048B93001C4FE6 /* FaceBookShareButton.png */,
+				889B4C1D190489F5001C4FE6 /* background.png */,
+				889B4C2319048A23001C4FE6 /* GreenNavBar.png */,
 				8800DFD81901DBEC0056877E /* HeaderView.xib */,
 				886511F81901A909001282C4 /* AppDelegate.h */,
 				886511F91901A909001282C4 /* AppDelegate.m */,
 				8800DFD01901D9F70056877E /* ToDoListTableViewController.h */,
 				8800DFD11901D9F70056877E /* ToDoListTableViewController.m */,
+				8838643F1904835100E86AD2 /* ShareViewController.h */,
+				883864401904835100E86AD2 /* ShareViewController.m */,
 				8800DFD31901DA080056877E /* StoryBoard.storyboard */,
+				8806058C19268C3E007441D2 /* InfoViewController.h */,
+				8806058D19268C3E007441D2 /* InfoViewController.m */,
+				8806058F19269095007441D2 /* ItemDetailsViewController.h */,
+				8806059019269095007441D2 /* ItemDetailsViewController.m */,
 				886511FE1901A909001282C4 /* Images.xcassets */,
+				880605921926975E007441D2 /* Item.h */,
+				880605931926975E007441D2 /* Item.m */,
 				886511FB1901A909001282C4 /* ToDoList.xcdatamodeld */,
-				8800DFD51901DB880056877E /* Item.h */,
-				8800DFD61901DB880056877E /* Item.m */,
 				886511F01901A909001282C4 /* Supporting Files */,
 			);
 			path = ToDoList;
@@ -244,10 +295,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8806059519269772007441D2 /* ToDoList.xcdatamodeld in Resources */,
+				889B4C2819048B90001C4FE6 /* TwitterShareButton.png in Resources */,
 				886511F41901A909001282C4 /* InfoPlist.strings in Resources */,
+				889B4C2619048A8F001C4FE6 /* button.png in Resources */,
+				889B4C1E190489F5001C4FE6 /* background.png in Resources */,
+				889B4C2C19048CBC001C4FE6 /* share.png in Resources */,
 				886511FF1901A909001282C4 /* Images.xcassets in Resources */,
+				889B4C2219048A0C001C4FE6 /* tabbar.png in Resources */,
+				889B4C2419048A23001C4FE6 /* GreenNavBar.png in Resources */,
+				889B4C3019048D0C001C4FE6 /* 53-house.png in Resources */,
+				889B4C2A19048B93001C4FE6 /* FaceBookShareButton.png in Resources */,
 				8800DFD41901DA080056877E /* StoryBoard.storyboard in Resources */,
 				8800DFD91901DBEC0056877E /* HeaderView.xib in Resources */,
+				889B4C2E19048CE5001C4FE6 /* 179-notepad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8800DFD71901DB880056877E /* Item.m in Sources */,
+				880605941926975E007441D2 /* Item.m in Sources */,
 				886511FA1901A909001282C4 /* AppDelegate.m in Sources */,
+				8806059119269095007441D2 /* ItemDetailsViewController.m in Sources */,
 				8800DFD21901D9F70056877E /* ToDoListTableViewController.m in Sources */,
 				886511FD1901A909001282C4 /* ToDoList.xcdatamodeld in Sources */,
+				883864411904835100E86AD2 /* ShareViewController.m in Sources */,
+				8806058E19268C3E007441D2 /* InfoViewController.m in Sources */,
 				886511F61901A909001282C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
